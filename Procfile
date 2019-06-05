@@ -1,1 +1,1 @@
-web: /app/dart-sdk/bin/pub global run aqueduct:aqueduct serve --port 3000 --config-path heroku.yaml
+web: /app/dart-sdk/bin/pub global run aqueduct:aqueduct serve --port 3000
