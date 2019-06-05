@@ -1,1 +1,1 @@
-web: /app/dart-sdk/bin/pub global run aqueduct:aqueduct serve --port 3000
+web: /app/dart-sdk/bin/pub global run aqueduct:aqueduct serve
