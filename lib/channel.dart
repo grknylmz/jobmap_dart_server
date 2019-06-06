@@ -1,5 +1,7 @@
 import 'controller/country_controller.dart';
 import 'controller/job_controller.dart';
+import 'controller/indeed_controller.dart';
+import 'package:cron/cron.dart';
 import 'jobmap.dart';
 import 'util/config.dart';
 import 'util/mongo.dart';
@@ -20,6 +22,10 @@ class JobmapChannel extends ApplicationChannel {
   /// This method is invoked prior to [entryPoint] being accessed.
   @override
   Future prepare() async {
+    // TODO: schedule a scraping period for every day.
+    _scheduleIndeedScrape();
+
+
     await _prepareDB();
     logger.onRecord.listen(
         (rec) => print("$rec ${rec.error ?? ""} ${rec.stackTrace ?? ""}"));
@@ -36,11 +42,21 @@ class JobmapChannel extends ApplicationChannel {
     final router = Router();
     router.route("/jobs").link(() => JobController(context, agent));
     router.route("/countries").link(() => CountryController(context));
+    router.route("/indeed").link(() => IndeedController(context));
     return router;
   }
 
+  //Connect to mlab Db
   Future _prepareDB() async {
     final config = ApplicationConfiguration(options.configurationFilePath);
     agent = MongoAgent.connect(config.url);
+  }
+
+  void _scheduleIndeedScrape() async {
+    final cron = Cron();
+
+    cron.schedule(Schedule.parse('*/1 * * * *'), () async {
+      print('run every minute!');
+    });
   }
 }

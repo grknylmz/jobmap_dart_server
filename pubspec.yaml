@@ -9,6 +9,9 @@ environment:
 dependencies:
   aqueduct: ^3.0.0
   mongo_dart: ^0.3.5
+  html:
+  http:
+  cron:
 
 dev_dependencies:
   test: ^1.0.0
