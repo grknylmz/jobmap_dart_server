@@ -14,9 +14,9 @@ class WebScraper {
         final response = await client.get(reqUrl);
         final document = parse(response.body);
         final s = document.querySelector('#searchCount');
+        print(element['name']);
         print(s.innerHtml);
-        print(s.attributes);
-        s.children.forEach((element) => print(element));
+        //s.children.forEach((element) => print(element));
       }
     });
   }
