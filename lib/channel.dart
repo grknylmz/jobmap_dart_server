@@ -1,6 +1,8 @@
 import 'controller/country_controller.dart';
+import 'controller/glass_controller.dart';
 import 'controller/indeed_controller.dart';
 import 'controller/job_controller.dart';
+import 'controller/neuvoo_controller.dart';
 import 'jobmap.dart';
 import 'util/config.dart';
 import 'util/mongo.dart';
@@ -38,6 +40,8 @@ class JobmapChannel extends ApplicationChannel {
     router.route("/jobs").link(() => JobController(context, agent));
     router.route("/countries").link(() => CountryController(context));
     router.route("/indeed").link(() => IndeedController(context));
+    router.route("/glass").link(() => GlassController(context));
+    router.route("/neuvoo").link(() => NeuvooController(context));
     return router;
   }
 
@@ -46,6 +50,4 @@ class JobmapChannel extends ApplicationChannel {
     final config = ApplicationConfiguration(options.configurationFilePath);
     agent = MongoAgent.connect(config.url);
   }
-
-
 }
