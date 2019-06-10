@@ -29,7 +29,7 @@ final List<Map<String, Object>> countries = [
     "name": "Bulgaria",
     "country_code": "BG",
     "capital": "Sofia",
-    "url": null
+    "url": ""
   },
   {
     "timezones": ["Europe/Minsk"],
@@ -37,7 +37,7 @@ final List<Map<String, Object>> countries = [
     "name": "Belarus",
     "country_code": "BY",
     "capital": "Minsk",
-    "url": null
+    "url": ""
   },
   {
     "timezones": ["America/Toronto"],
@@ -93,7 +93,7 @@ final List<Map<String, Object>> countries = [
     "name": "Estonia",
     "country_code": "EE",
     "capital": "Tallinn",
-    "url": null
+    "url": ""
   },
   {
     "timezones": ["Europe/Helsinki"],
@@ -101,7 +101,7 @@ final List<Map<String, Object>> countries = [
     "name": "Finland",
     "country_code": "FI",
     "capital": "Helsinki",
-    "url": "https://at.indeed.com/"
+    "url": "https://www.indeed.fi/"
   },
   {
     "timezones": ["Europe/Paris"],
@@ -117,7 +117,7 @@ final List<Map<String, Object>> countries = [
     "name": "United Kingdom",
     "country_code": "GB",
     "capital": "London",
-    "url": "https://at.indeed.com/"
+    "url": "https://www.indeed.co.uk/"
   },
   {
     "timezones": ["Europe/Athens"],
@@ -133,7 +133,7 @@ final List<Map<String, Object>> countries = [
     "name": "Croatia",
     "country_code": "HR",
     "capital": "Zagreb",
-    "url": null
+    "url":""
   },
   {
     "timezones": ["Europe/Budapest"],
@@ -173,7 +173,7 @@ final List<Map<String, Object>> countries = [
     "name": "Latvia",
     "country_code": "LV",
     "capital": "Riga",
-    "url": "https://at.indeed.com/"
+    "url": ""
   },
   {
     "timezones": ["Europe/Amsterdam"],
@@ -237,7 +237,7 @@ final List<Map<String, Object>> countries = [
     "name": "Slovakia",
     "country_code": "SK",
     "capital": "Bratislava",
-    "url": null
+    "url": ""
   },
   {
     "timezones": ["Europe/Stockholm"],

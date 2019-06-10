@@ -9,7 +9,7 @@ class WebScraper {
   Future<dynamic> scrape(String tag) async {
     for (var element in countries) {
       final prefix = element['url'].toString();
-      if (prefix != 'null') {
+      if (prefix != "") {
         final url = prefix + tag;
         await getHtml(url).then((document) async {
           //Country Code
@@ -19,6 +19,7 @@ class WebScraper {
               parseJobCountry(document.querySelector('#searchCount').innerHtml);
 
           countryStatistics[cc] = count;
+          print('Added value ${countryStatistics[cc]}');
         });
       }
     }
@@ -33,7 +34,7 @@ class WebScraper {
       .then((bytes) => parse(bytes, sourceUrl: url));
 
   String parseJobCountry(String html) {
-    final matchMap = RegExp(r'[0-9]+').allMatches(html).toList();
+    final matchMap = RegExp(r'\b\d[\d,.]*\b').allMatches(html).toList();
     return html.substring(matchMap[1].start, matchMap[1].end);
   }
 }
