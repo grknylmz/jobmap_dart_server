@@ -4,7 +4,7 @@ import 'package:cron/cron.dart';
 
 Future main() async {
   // Schedule the CRON job
-  _scheduleIndeedScrape();
+  //_scheduleIndeedScrape();
 
   final app = Application<JobmapChannel>()
       ..options.configurationFilePath = "config.yaml"

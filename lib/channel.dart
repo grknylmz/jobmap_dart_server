@@ -1,6 +1,6 @@
 import 'controller/country_controller.dart';
-import 'controller/job_controller.dart';
 import 'controller/indeed_controller.dart';
+import 'controller/job_controller.dart';
 import 'jobmap.dart';
 import 'util/config.dart';
 import 'util/mongo.dart';

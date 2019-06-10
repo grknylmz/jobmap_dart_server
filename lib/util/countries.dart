@@ -6,9 +6,7 @@ final List<Map<String, Object>> countries = [
     "country_code": "AU",
     "capital": "Canberra",
     "url": "https://au.indeed.com/"
-  }
-];
-/*,
+  },
   {
     "timezones": ["Europe/Vienna"],
     "latlng": [47.33333333, 13.33333333],
@@ -183,7 +181,7 @@ final List<Map<String, Object>> countries = [
     "name": "Netherlands",
     "country_code": "NL",
     "capital": "Amsterdam",
-    "url": "https://at.indeed.com/"
+    "url": "https://www.indeed.nl/"
   },
   {
     "timezones": ["Europe/Oslo"],
@@ -273,4 +271,4 @@ final List<Map<String, Object>> countries = [
     "capital": "Washington D.C.",
     "url": "https://www.indeed.com/"
   }
-]; */
+];
