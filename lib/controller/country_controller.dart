@@ -1,5 +1,5 @@
 import '../jobmap.dart';
-import '../util/countries.dart';
+import '../model/countries.dart';
 
 class CountryController extends ResourceController {
   CountryController(this.context);

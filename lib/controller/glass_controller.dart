@@ -1,13 +1,10 @@
 import '../jobmap.dart';
-import '../util/countries.dart';
 import '../util/web_scraper.dart';
 
 class GlassController extends ResourceController {
   GlassController(this.context);
   final ManagedContext context;
   final WebScraper scraper = WebScraper();
-
-
 
   @Operation.get()
   Future<Response> getGlassDoorData(@Bind.query('key') String keyword) async {

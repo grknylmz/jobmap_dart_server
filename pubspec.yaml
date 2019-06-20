@@ -12,6 +12,8 @@ dependencies:
   html:
   http:
   cron:
+  dio:
+
 
 dev_dependencies:
   test: ^1.0.0

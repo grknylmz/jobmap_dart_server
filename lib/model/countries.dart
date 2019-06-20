@@ -198,7 +198,7 @@ final List<Map<String, Object>> countries = [
     'glassLocId': '141'
   },
   {
-    'timezones': ['Europe/Amsterdam'],
+    'timezones':  ['Europe/Amsterdam'],
     'latlng': [52.5, 5.75],
     'name': 'Netherlands',
     'country_code': 'NL',

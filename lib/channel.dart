@@ -2,6 +2,7 @@ import 'controller/country_controller.dart';
 import 'controller/glass_controller.dart';
 import 'controller/indeed_controller.dart';
 import 'controller/job_controller.dart';
+import 'controller/linkedin_controller.dart';
 import 'controller/neuvoo_controller.dart';
 import 'jobmap.dart';
 import 'util/config.dart';
@@ -42,6 +43,7 @@ class JobmapChannel extends ApplicationChannel {
     router.route("/indeed").link(() => IndeedController(context));
     router.route("/glass").link(() => GlassController(context));
     router.route("/neuvoo").link(() => NeuvooController(context));
+    router.route("/linkedin").link(() => LinkedinController(context));
     return router;
   }
 
