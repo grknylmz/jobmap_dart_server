@@ -1,6 +1,7 @@
 import 'controller/country_controller.dart';
 import 'controller/glass_controller.dart';
 import 'controller/indeed_controller.dart';
+import 'controller/index_controller.dart';
 import 'controller/job_controller.dart';
 import 'controller/linkedin_controller.dart';
 import 'controller/neuvoo_controller.dart';
@@ -38,6 +39,7 @@ class JobmapChannel extends ApplicationChannel {
   @override
   Controller get entryPoint {
     final router = Router();
+    router.route("/").link(() => IndexController(context));
     router.route("/jobs").link(() => JobController(context, agent));
     router.route("/countries").link(() => CountryController(context));
     router.route("/indeed").link(() => IndeedController(context));

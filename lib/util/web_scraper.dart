@@ -74,7 +74,6 @@ class WebScraper {
       if (url.isNotEmpty) {
         await getHtml(url).then((document) async {
           //Job Count
-          final html = document.getElementById('nv-count').innerHtml;
           final count =
               parseJobCountry(document.getElementById('nv-count').innerHtml, 0);
 
