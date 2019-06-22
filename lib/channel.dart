@@ -8,6 +8,7 @@ import 'controller/neuvoo_controller.dart';
 import 'jobmap.dart';
 import 'util/config.dart';
 import 'util/mongo.dart';
+import 'package:aqueduct/managed_auth.dart';
 
 /// This type initializes an application.
 ///
@@ -16,6 +17,7 @@ import 'util/mongo.dart';
 class JobmapChannel extends ApplicationChannel {
   ManagedContext context;
   MongoAgent agent;
+  AuthServer authServer;
 
   /// Initialize services in this method.
   ///
@@ -26,6 +28,10 @@ class JobmapChannel extends ApplicationChannel {
   @override
   Future prepare() async {
     await _prepareDB();
+    //final delegate = ManagedAuthDelegate(context);
+    //authServer = AuthServer(delegate);
+
+
     logger.onRecord.listen(
         (rec) => print("$rec ${rec.error ?? ""} ${rec.stackTrace ?? ""}"));
   }
@@ -46,6 +52,10 @@ class JobmapChannel extends ApplicationChannel {
     router.route("/glass").link(() => GlassController(context));
     router.route("/neuvoo").link(() => NeuvooController(context));
     router.route("/linkedin").link(() => LinkedinController(context));
+
+    // Later on;
+    // router.route("/auth/token").link(() => AuthController(authServer));
+
     return router;
   }
 
