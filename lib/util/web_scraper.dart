@@ -19,9 +19,9 @@ class WebScraper {
 
     try {
       final formData = FormData.from({
-        'session_key': 'yilmaz.gurkan@hotmail.com.tr',
-        'session_password': 'grk426333',
-        'csrfToken': 'ajax:7320458600371952580'
+        'session_key': '',
+        'session_password': '',
+        'csrfToken': ''
       });
       var response = await Dio().post(url, data: formData);
 
