@@ -14,7 +14,11 @@ class JobController extends ResourceController {
 
   @Operation.get()
   Future<Response> getJobs(@Bind.query('key') String keyword) async {
-    return Response.ok('Unauthorized!');
+    var result = await scraper.scrapeIndeed(keyword);
+    result = await scraper.scrapeGlass(keyword);
+    result = await scraper.scrapeNeuvoo(keyword);
+    Response.ok('Saved results to DB');
   }
+
   void checkResults() {}
 }

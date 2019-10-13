@@ -31,7 +31,6 @@ class JobmapChannel extends ApplicationChannel {
     //final delegate = ManagedAuthDelegate(context);
     //authServer = AuthServer(delegate);
 
-
     logger.onRecord.listen(
         (rec) => print("$rec ${rec.error ?? ""} ${rec.stackTrace ?? ""}"));
   }
